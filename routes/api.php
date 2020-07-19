@@ -20,5 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('v1/category', ['as' => 'v1.category', 'uses' => 'Api\SampahController@category']);
 Route::get('v1/sampah', ['as' => 'v1.sampah', 'uses' => 'Api\SampahController@sampah']);
+Route::get('v1/sampah/edit/{id}', ['as' => 'v1.sampah.edit', 'uses' => 'Api\SampahController@edit']);
 Route::post('v1/sampah', ['as' => 'v1.sampah', 'uses' => 'Api\SampahController@store']);
-Route::delete('v1/sampah/destroy/{id}', ['as' => 'v1.sampah', 'uses' => 'Api\SampahController@destroy']);
+Route::put('v1/sampah/update/{id}', ['as' => 'v1.sampah.update', 'uses' => 'Api\SampahController@update']);
+Route::delete('v1/sampah/destroy/{id}', ['as' => 'v1.sampah.destroy', 'uses' => 'Api\SampahController@destroy']);

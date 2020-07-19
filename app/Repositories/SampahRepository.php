@@ -10,8 +10,8 @@ class SampahRepository extends Controller
 {
     public function getAll()
     {
-        $result = Sampah::orderBy('id', 'DESC')->get();
-
+        $result = Sampah::orderBy('id', 'DESC')->paginate(3);
+        
         foreach ($result as $key => $val) {
             $result[$key]->category = $val->category;
         }

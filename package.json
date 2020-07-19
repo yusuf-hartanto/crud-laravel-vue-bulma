@@ -21,6 +21,7 @@
         "webpack-cli": "^3.3.12"
     },
     "dependencies": {
+        "laravel-vue-bulma-paginator": "^1.0.0",
         "vue": "^2.6.11",
         "vue-loading-overlay": "^3.3.2",
         "vue-router": "^3.3.4",

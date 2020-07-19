@@ -28,6 +28,15 @@ class SampahService
         return $this->mdlSampah;
 	}
 
+    public function update(array $data) : Sampah
+    {
+        $this->mdlSampah->name = $data['name'];
+        $this->mdlSampah->category_id = $data['category_id'];
+        $this->mdlSampah->update();
+
+        return $this->mdlSampah;
+    }
+
     public function delete() : bool
     {
         $this->mdlSampah->delete();

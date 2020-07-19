@@ -9,6 +9,8 @@ import 'vue-loading-overlay/dist/vue-loading.css';
 Vue.use(Loading);
 Vue.use(Vuelidate);
 
+Vue.component('pagination', require('laravel-vue-bulma-paginator'));
+
 const app = new Vue ({
 	el: "#app",
 	router
