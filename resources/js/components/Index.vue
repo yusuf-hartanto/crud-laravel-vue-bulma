@@ -57,7 +57,7 @@
                     loader.hide()
                 },1000);
 
-                axios.get('api/v1/sampah?page=' + page)
+                sampah.getSampah(page)
                 .then(response => {
                     this.sampah = response.data;
                     loader.hide();
